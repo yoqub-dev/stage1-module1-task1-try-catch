@@ -10,10 +10,9 @@ import java.util.List;
  */
 public class ParseIntegers {
 
-    private static final List<String> WORDS =
-            Arrays.asList(
-                    "JDK 17 has released on 14 September 2021 with 10 new features, 2 feature removals and 2 feature deprecations."
-                            .split(" "));
+    private static final List<String> WORDS = Arrays.asList(
+            "JDK 17 has released on 14 September 2021 with 10 new features, 2 feature removals and 2 feature deprecations."
+                    .split(" "));
 
     public static void main(String[] args) {
 
@@ -24,15 +23,14 @@ public class ParseIntegers {
             String next = words.next();
             try {
                 int number = Integer.parseInt(next);
-                sum+=number;
-
-            }catch (NumberFormatException exception){
-                justWords += next + " ";
+                sum += number;
+            } catch (NumberFormatException exception) {
+                justWords += next + " "; // Add a space after concatenated words
             }
         }
         justWords = justWords.trim();
-        System.out.println("Sum is "+sum);
-        System.out.println(justWords);
+        System.out.println("Sum is " + sum);
+        System.out.println("Just words: " + justWords); // Print the correct message
     }
 }
 
