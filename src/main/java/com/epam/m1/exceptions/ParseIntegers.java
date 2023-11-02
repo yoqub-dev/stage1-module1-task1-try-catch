@@ -31,8 +31,8 @@ public class ParseIntegers {
             }
         }
         justWords = justWords.trim();
-        System.out.println("Sum is " + sum);
-        System.out.println("Just words:" + justWords);
+        System.out.println(sum);
+        System.out.println(justWords);
     }
 }
 
