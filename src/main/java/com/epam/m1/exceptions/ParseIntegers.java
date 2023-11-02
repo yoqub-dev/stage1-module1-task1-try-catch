@@ -19,7 +19,7 @@ public class ParseIntegers {
 
         Iterator<String> words = WORDS.iterator();
         int sum = 0;
-        StringBuilder justWords = new StringBuilder();
+        String justWords = "";
         while (words.hasNext()) {
             String next = words.next();
             try {
@@ -27,11 +27,11 @@ public class ParseIntegers {
                 sum+=number;
 
             }catch (NumberFormatException exception){
-                justWords.append(next).append(" ");
+                justWords += next + " ";
             }
         }
-        justWords = new StringBuilder(justWords.toString().trim());
-        System.out.println(sum);
+        justWords = justWords.trim();
+        System.out.println("Sum is "+sum);
         System.out.println(justWords);
     }
 }
